@@ -454,7 +454,7 @@ class PracticeBattle {
     _next(q, a) {
       document.querySelector('#input_answer').remove();
       const btn = document.createElement('button');
-      btn.innerText = "段数せんたくに戻る";
+      btn.innerText = "戻る";
       btn.id = 'input_answer';
       btn.classList.add('next_btn');
       practice_B_View.appendChild(btn);
