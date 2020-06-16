@@ -201,7 +201,7 @@ class Practice {
     const allBtn = document.createElement('span');
     allBtn.classList.add('btn', 'btn-danger');
     allBtn.id = 'allbtn';
-    allBtn.innerText = '全段チャレンジ';
+    allBtn.innerText = '全チャレ';
     ul.appendChild(allBtn);
     ul.addEventListener('click', (e) => {
       if (e.target.classList.contains('btn') != true) return;
@@ -363,7 +363,6 @@ class PracticeBattle {
 
   _judgeKeybord(q, a) {
     const input = document.querySelector('#input_answer');
-    input.focus();
     document.addEventListener('keydown', e => {
       if (e.keyCode == 13) {
         setTimeout(() => new Efect()._animation(input, 500, anime.shake), 100);
@@ -402,7 +401,7 @@ class PracticeBattle {
 
   _judgeConsole(q, a) {
     const input = document.querySelector('#input_answer');
-    consoleView.addEventListener('click', (e) => {
+    document.querySelector('#con_con').addEventListener('click', (e) => {
       e.target.classList.add('active');
       setTimeout(() => e.target.classList.remove('active'),50);
       if (e.target.id == 'atkbtn') {
@@ -966,7 +965,6 @@ class Control {
 
   _judgeKeybord(q, a, tage) {
     const input = document.querySelector('#input_answer');
-    input.focus();
     document.addEventListener('keydown', e => {
       if (e.keyCode == 13) {
         setTimeout(() => new Efect()._animation(input, 500, anime.shake), 100);
@@ -1010,7 +1008,7 @@ class Control {
 
   _judgeConsole(q, a, tage) {
     const input = document.querySelector('#input_answer');
-    consoleView.addEventListener('click', (e) => {
+    document.querySelector('#con_con').addEventListener('click', (e) => {
       e.target.classList.add('active');
       setTimeout(() => e.target.classList.remove('active'),50);
       if (e.target.id == 'atkbtn') {
@@ -1068,7 +1066,7 @@ class Control {
     const btn = document.createElement('button');
     const charaHp = document.querySelector('#myhp_mater');
     const hpFlame = document.querySelector('#battle');
-    btn.innerText = "次へすすむ";
+    btn.innerText = "次へ";
     btn.id = 'input_answer';
     btn.classList.add('next_btn');
     battleView.appendChild(btn);
