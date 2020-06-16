@@ -272,7 +272,7 @@ class PracticeBattle {
   _createText(text, id) {
     const h1 = document.createElement('h1');
     h1.innerText = text;
-    if (practiceType == 'a') h1.innerText = '全段チャレンジ';
+    if (practiceType == 'a') h1.innerText = '全チャレ';
     h1.id = id;
     h1.classList.add('badge', 'badge-warning');
     practice_B_View.appendChild(h1);
